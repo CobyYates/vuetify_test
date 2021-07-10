@@ -1,6 +1,10 @@
 <template>
   <div>
     <v-btn @click="openApi()">Hit API</v-btn>
+    <v-card width="400" height="auto" class="mt-5" v-if="error">
+      <v-card-title>Error</v-card-title>
+      <v-card-text>{{error}}</v-card-text>
+    </v-card>
   </div>
 </template>
 
@@ -9,37 +13,23 @@ export default {
   data() {
     return {
       data: null,
+      error: null
     };
   },
   methods: {
     openApi() {
-      //   let url = `https://openvacancy-dot-sandbox-opsy.uc.r.appspot.com/api/candidates`
-      //   // let url = 'http://example.com/movies.json'
-      // this.data = fetch(url, {
-      //   method: 'get',
-      //   mode: 'cors',
-      //   headers: {
-      //     "Content-Type": "application/json",
-      //     'Access-Control-Allow-Origin': '*',
-      //     'Authentication': this.$store.state.currentUser.idToken
-      //     // 'Authentication': 'eyJhbGciOiJSUzI1NiIsImtpZCI6Ijg4ZGYxMzgwM2I3NDM2NjExYWQ0ODE0NmE4ZGExYjA3MTg2ZmQxZTkiLCJ0eXAiOiJKV1QifQ'
-      //   }
-      // })
-      // .then((e) => {
-      //   console.log('step1',e)
-      // })
-      console.log('here')
       fetch(
-        "https://openvacancy-dot-sandbox-opsy.uc.r.appspot.com/api/candidates",
+        "https://openvacancy-dot-sandbox-opsy.uc.r.appspot.com/api/vacancies",
         {
           headers: {
-            mode: "cors",
+            type: "cors",
+            'Accept': "application/json",
             "Content-Type": "application/json",
-            Authentication: this.$store.state.currentUser.idToken,
+            token: this.$store.state.currentUser.idToken,
           },
         }
       )
-        .then((response) => console.log(response))
+        .then((response) => this.error = response)
         .then((data) => console.log(data));
     },
   },

@@ -2,12 +2,11 @@
   <div>
     <v-row class="mt-8">
       <v-col
-        cols="10"
-        class="mx-auto"
+        cols="12"
         v-for="vacancy in $store.state.vacancies"
         :key="vacancy.i"
       >
-        <v-card>
+        <v-card @click="openListing(vacancy.vacancyID)">
           <v-card-title class="d-flex justify-space-between">
             {{ vacancy.title }}
             <v-btn
@@ -16,7 +15,7 @@
               color="blue"
               dark
             >
-              Apply
+              View
               <v-icon right>mdi-open-in-new</v-icon></v-btn
             >
           </v-card-title>

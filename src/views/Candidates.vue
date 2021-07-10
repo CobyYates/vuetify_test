@@ -2,7 +2,7 @@
   <div>
     <h2>Candidates</h2>
     <v-row>
-      <v-col cols="10" class="mx-auto mt-10">
+      <v-col>
         <v-data-table
           :headers="headers"
           :items="$store.state.candidates"

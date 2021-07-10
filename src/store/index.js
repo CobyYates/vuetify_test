@@ -6,6 +6,7 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     currentUser: ["testing"],
+    jobType: ["Full-time","Part-time"],
     candidates: [
       {
         candidateID: 1,
@@ -51,6 +52,28 @@ export default new Vuex.Store({
         profileImage:
           "https://images.pexels.com/photos/3684516/pexels-photo-3684516.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
       },
+      {
+        candidateID: 3,
+        first: "John",
+        last: "Smith",
+        email: "john@email.com",
+        dateAdded: "7/5/2021",
+        resume: "MyResume.pdf",
+        portfolio: "https://coberapps.com",
+        profileImage:
+          "https://images.pexels.com/photos/1486058/pexels-photo-1486058.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      },
+      {
+        candidateID: 4,
+        first: "John",
+        last: "Smith",
+        email: "john@email.com",
+        dateAdded: "7/5/2021",
+        resume: "MyResume.pdf",
+        portfolio: "https://coberapps.com",
+        profileImage:
+          "https://images.pexels.com/photos/3684516/pexels-photo-3684516.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+      },
     ],
     vacancies: [
       {
@@ -64,7 +87,7 @@ export default new Vuex.Store({
         companyInfo: [
           {
             logo: "https://vuejobs.com/storage/avatars/5E4Y4UPCdT1tdVmpcxJHWxVsFsvfNrjPmrqC9kVs.png",
-            website: "",
+            website: "https://opsydirect.com/",
           },
         ],
         summary:
@@ -94,6 +117,8 @@ export default new Vuex.Store({
 </ul>
 <p><strong>Salary:</strong></p>
 <p>$25 - $45/hour</p></div>`,
+        howToApply:
+          "<p>To apply please fill-up this form: <a href='https://forms.gle/3sY2NXgsWaC9zg3YA'>https://forms.gle/3sY2NXgsWaC9zg3YA</a></p>",
         skills: [
           "Vuetify",
           "API Integration",
@@ -114,7 +139,7 @@ export default new Vuex.Store({
         companyInfo: [
           {
             logo: "https://vuejobs.com/storage/avatars/5E4Y4UPCdT1tdVmpcxJHWxVsFsvfNrjPmrqC9kVs.png",
-            website: "",
+            website: "https://opsydirect.com/",
           },
         ],
         summary:
@@ -146,6 +171,8 @@ export default new Vuex.Store({
 <p>$25 - $45/hour</p>
 
                 </div>`,
+        howToApply:
+          "<p>To apply please fill-up this form: <a href='https://forms.gle/3sY2NXgsWaC9zg3YA'>https://forms.gle/3sY2NXgsWaC9zg3YA</a></p>",
         skills: [
           "Vuetify",
           "API Integration",
@@ -166,7 +193,7 @@ export default new Vuex.Store({
         companyInfo: [
           {
             logo: "https://vuejobs.com/storage/avatars/5E4Y4UPCdT1tdVmpcxJHWxVsFsvfNrjPmrqC9kVs.png",
-            website: "",
+            website: "https://opsydirect.com/",
           },
         ],
         summary:
@@ -198,6 +225,8 @@ export default new Vuex.Store({
 <p>$25 - $45/hour</p>
 
                 </div>`,
+        howToApply:
+          "<p>To apply please fill-up this form: <a href='https://forms.gle/3sY2NXgsWaC9zg3YA'>https://forms.gle/3sY2NXgsWaC9zg3YA</a></p>",
         skills: [
           "Vuetify",
           "API Integration",

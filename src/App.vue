@@ -38,7 +38,7 @@
     </v-navigation-drawer>
 
     <v-main>
-      <router-view />
+      <router-view class="ma-10" />
     </v-main>
   </v-app>
 </template>
