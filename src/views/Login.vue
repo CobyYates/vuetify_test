@@ -18,11 +18,16 @@ import "firebaseui/dist/firebaseui.css";
 
 export default {
   mixins: [validationMixin],
-
+  data() {
+    return {
+      //
+    }
+  },
   validations: {
     email: { required, email },
   },
   mounted() {
+    console.log(this.VUE_APP_VALUE)
     let ui = firebaseui.auth.AuthUI.getInstance();
     if (!ui) {
       ui = new firebaseui.auth.AuthUI(firebase.auth());
